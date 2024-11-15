@@ -68,10 +68,7 @@
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -166,3 +163,51 @@ a.secondary {
     filter: invert();
   }
 }
+
+.toolBar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(25, 25, 25) !important;
+  width: 100vw;
+  font-size: larger;
+  font-style: bold;
+  color: rgb(255, 255, 255);
+  padding: 15px 10px;
+}
+
+.textareaContainer {
+  position: relative;
+  width: 100%;
+
+}
+
+.textArea {
+  width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: none; /* Disable manual resizing by the user */
+  overflow: hidden; /* Hide scrollbars */
+}
+/* 
+/* Mirror element to reflect textarea content */
+.mirrorDiv {
+  visibility: hidden; /* Hide the mirror */
+  white-space: pre-wrap; /* Ensure wrapping similar to textarea */
+  word-wrap: break-word; /* Break long words */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 40px; /* Match textarea's min height */
+  padding: 8px; /* Match padding of the textarea */
+  box-sizing: border-box;
+  border: 1px solid transparent; /* Same border to avoid layout changes */
+  font-size: 16px; /* Match font settings */
+  font-family: inherit;
+} 
