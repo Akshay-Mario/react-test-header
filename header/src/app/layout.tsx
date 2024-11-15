@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content"></meta>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body style={{height: '100dvh'}} className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>

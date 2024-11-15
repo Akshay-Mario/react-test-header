@@ -7,50 +7,38 @@
   --button-secondary-hover: #f2f2f2;
 
   display: grid;
-  grid-template-rows: 20px 1fr 20px;
+  grid-template-rows: auto 1fr;  /* Two rows layout */
   align-items: center;
   justify-items: center;
-  min-height: 100dvh;
-  height: 100dvh !important;
+  height: 100dvh; /* Use dynamic viewport height */
   gap: 64px;
   font-family: var(--font-geist-sans);
 }
-
 
 .main {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  grid-row-start: 2;
-  padding: 0px 80px;
-
-}
-
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr;  /* Changed to allow only two rows */
-  min-height: 100vh;
-  font-family: var(--font-geist-sans);
+  padding: 80px 80px;
 }
 
 .toolBar {
-  position: fixed; /* Make the toolbar fixed at the top of the page */
+  position: fixed; /* Fix the toolbar at the top */
   top: 0;
   left: 0;
   background-color: rgb(25, 25, 25);
-  width: 100dvw; /* Full width of the screen */
+  width: 100dvw; /* Full width */
   font-size: larger;
   font-weight: bold;
   color: rgb(255, 255, 255);
   padding: 15px 10px;
-  z-index: 9999; /* Ensure the toolbar is always on top */
+  z-index: 9999;
   box-sizing: border-box;
 }
 
 .textareaContainer {
   position: relative;
   width: 100%;
-
 }
 
 .textArea {
@@ -59,23 +47,6 @@
   padding: 8px;
   box-sizing: border-box;
   font-size: 16px;
-  resize: none; /* Disable manual resizing by the user */
-  overflow: hidden; /* Hide scrollbars */
+  resize: none;
+  overflow: hidden;
 }
-/* 
-/* Mirror element to reflect textarea content */
-.mirrorDiv {
-  visibility: hidden; /* Hide the mirror */
-  white-space: pre-wrap; /* Ensure wrapping similar to textarea */
-  word-wrap: break-word; /* Break long words */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 40px; /* Match textarea's min height */
-  padding: 8px; /* Match padding of the textarea */
-  box-sizing: border-box;
-  border: 1px solid transparent; /* Same border to avoid layout changes */
-  font-size: 16px; /* Match font settings */
-  font-family: inherit;
-} 
