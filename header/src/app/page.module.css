@@ -10,7 +10,8 @@
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
   justify-items: center;
-  min-height: 100svh;
+  min-height: 100dvh;
+  height: 100dvh !important;
   gap: 64px;
   font-family: var(--font-geist-sans);
 }
@@ -37,7 +38,7 @@
   top: 0;
   left: 0;
   background-color: rgb(25, 25, 25);
-  width: 100vw; /* Full width of the screen */
+  width: 100dvw; /* Full width of the screen */
   font-size: larger;
   font-weight: bold;
   color: rgb(255, 255, 255);
