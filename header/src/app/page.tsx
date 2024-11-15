@@ -1,5 +1,5 @@
 
-"use client"; 
+"use client";
 import styles from "./page.module.css";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 
@@ -20,36 +20,35 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <>
+
+      <div className={styles.page}>
         <header className={styles.toolBar}>Tool Bar</header>
-        <div className={styles.textareaContainer}>
-          <textarea className={styles.textArea} id="autoGrowTextarea" placeholder="Type here..."></textarea>
-          {/* <div className="mirrorDiv"></div> */}
-        </div>
 
-        <div>
-        <textarea
-      ref={textareaRef}
-      value={text}
-      onChange={handleChange}
-      style={{
-        width: '100%',
-        overflow: 'hidden',
-        resize: 'none', // Prevent manual resize
-        minHeight: '40px',
-        padding: '8px',
-        border: '1px solid #ccc',
-        fontFamily: 'inherit',
-        fontSize: 'inherit',
-        boxSizing: 'border-box',
-        minWidth: '90vw',
-      }}
-      placeholder="Type here..."
-    />
-    </div>
-      </main>
+        <main className={styles.main}>
+          <div>
+            <textarea
+              ref={textareaRef}
+              value={text}
+              onChange={handleChange}
+              style={{
+                width: '100%',
+                overflow: 'hidden',
+                resize: 'none', // Prevent manual resize
+                minHeight: '40px',
+                padding: '8px',
+                border: '1px solid #ccc',
+                fontFamily: 'inherit',
+                fontSize: 'inherit',
+                boxSizing: 'border-box',
+                minWidth: '10vw',
+              }}
+              placeholder="Type here..."
+            />
+          </div>
+        </main>
 
-    </div>
+      </div>
+    </>
   );
 }
