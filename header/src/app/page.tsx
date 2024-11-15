@@ -1,8 +1,7 @@
 
 "use client"; 
 import styles from "./page.module.css";
-import Basic from "./components/basic";
-import { useEffect, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [text, setText] = useState('');
@@ -16,7 +15,7 @@ export default function Home() {
     }
   }, [text]); // Runs whenever text changes
 
-  const handleChange = (event: any) => {
+  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setText(event.target.value);
   };
 
